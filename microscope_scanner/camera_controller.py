@@ -54,7 +54,6 @@ class CameraController:
         self._cap.set(cv2.CAP_PROP_FRAME_WIDTH, self._width)
         self._cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self._height)
 
-        # Disable auto exposure if supported (capability varies by driver)
         try:
             self._cap.set(cv2.CAP_PROP_AUTO_EXPOSURE, 0)
         except Exception:
